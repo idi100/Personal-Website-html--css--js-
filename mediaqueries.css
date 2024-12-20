@@ -1,113 +1,56 @@
-/* General Adjustments for Medium-Sized Screens (iPads, square screens, etc.) */
+/* General Adjustments for Medium-Sized Screens */
 @media screen and (max-width: 1400px) {
   #profile {
-    height: auto; /* Allow content to determine height */
-    margin-bottom: 4rem; /* Adjust spacing */
+    flex-direction: column;
+    gap: 2rem;
   }
   .about-containers {
-    flex-wrap: wrap; /* Wrap items to fit the screen */
+    flex-wrap: wrap;
+    gap: 2rem;
   }
   .section-container {
-    gap: 2rem; /* Add spacing between flex items */
+    flex-wrap: wrap;
+    gap: 2rem;
   }
 }
 
-/* Adjustments for Smaller Tablets and Landscape Phones */
+/* Adjustments for Smaller Tablets */
 @media screen and (max-width: 1200px) {
   #desktop-nav {
-    display: none; /* Hide desktop nav */
+    display: none;
   }
   #hamburger-nav {
-    display: flex; /* Show hamburger nav */
-  }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block; /* Stack sections vertically */
-  }
-  .arrow {
-    display: none; /* Hide decorative arrows */
-  }
-  section,
-  .section-container {
-    height: fit-content; /* Allow height to adapt to content */
+    display: flex;
   }
   section {
-    margin: 0 5%; /* Reduce side margins */
+    margin: 0 5%;
   }
   .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem; /* Center the picture */
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
   }
-  .about-containers {
-    margin-top: 0;
-    gap: 2rem; /* Add spacing for wrapped content */
-  }
-  .experience-details-container {
-    flex-wrap: wrap; /* Allow items to wrap for narrower screens */
+  .details-container {
+    flex: 1 1 100%;
   }
 }
 
-/* Adjustments for Phones and Very Small Screens */
+/* Adjustments for Phones */
 @media screen and (max-width: 600px) {
   #contact,
   footer {
-    height: auto; /* Allow flexible height */
-    padding: 2rem 1rem; /* Add padding */
-  }
-  #profile {
-    height: auto; /* Allow content to determine height */
-    margin-bottom: 0;
-  }
-  article {
-    font-size: 1rem; /* Adjust text size */
-  }
-  footer nav {
-    height: fit-content; /* Allow content to determine height */
-    margin-bottom: 2rem;
+    padding: 2rem 1rem;
   }
   .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
+  .experience-details-container {
     flex-wrap: wrap;
-    gap: 1rem; /* Add spacing */
-  }
-  .contact-info-container {
-    margin: 0 auto;
-    text-align: center; /* Center-align contact information */
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem; /* Adjust text size */
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column; /* Stack links vertically */
-    gap: 0.5rem;
-    text-align: center;
+    gap: 1rem;
   }
   .section__pic-container {
-    width: auto;
-    height: 46vw; /* Use viewport width for flexible height */
-    justify-content: center;
-  }
-  .section__text__p2 {
-    font-size: 1.25rem;
+    width: 100%;
+    height: auto;
   }
   .title {
     font-size: 2rem;
-  }
-  .text-container {
-    text-align: justify;
-    padding: 0 1rem; /* Add padding for better readability */
   }
 }
