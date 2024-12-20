@@ -355,30 +355,65 @@ article .icon {
 
 /* PROJECTS SECTION */
 
+/* PROJECTS SECTION */
+
 #projects {
   position: relative;
 }
 
-.color-container {
-  border-color: rgb(163, 163, 163);
+.experience-details-container {
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: space-between; /* Space between the items */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 1.5rem; /* Space between each project card */
+}
+
+.details-container {
+  flex: 1 1 calc(33.333% - 1.5rem); /* Three items in a row */
+  box-sizing: border-box; /* Include padding/border in width calculation */
   background: rgb(250, 250, 250);
+  border: rgb(163, 163, 163) 0.1rem solid;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 .project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  border-radius: 0.5rem;
+  max-width: 100%; /* Ensure the image fits within its container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 150px; /* Limit the height of images */
+  object-fit: contain; /* Ensure the image is fully visible */
+  margin-bottom: 0.5rem;
 }
 
 .project-title {
-  margin: 1rem;
+  margin: 1rem 0 0.5rem 0;
   color: black;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem; /* Space between buttons */
 }
 
 .project-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  transition: all 300ms ease;
   color: black;
-  border-color: rgb(163, 163, 163);
+  border: rgb(163, 163, 163) 0.1rem solid;
 }
+
+.project-btn:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
 
 /* CONTACT */
 
